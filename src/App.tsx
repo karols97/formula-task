@@ -31,9 +31,8 @@ function App() {
 
     try {
       if (!isTagsListVisible) {
-        const calculatedResult: number =
-          math.evaluate(expression) +
-          tagsValues.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        const calculatedResult: number = math.evaluate(expression);
+        // + tagsValues.reduce((accumulator, currentValue) => accumulator + currentValue, 0); TODO: uncomment when implementing tags
         setResult(calculatedResult);
       }
     } catch (error) {
